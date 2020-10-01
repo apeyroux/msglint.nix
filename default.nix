@@ -10,6 +10,8 @@ stdenv.mkDerivation {
     sha256 = "1yasj6nijip3z86m526bsssd5vgqrx233azvpz1c0z564wngvzbm";
   };
 
+  patches = [ ./fixfree.patch ];
+
   installPhase = ''
     mkdir -p $out/bin
     cp msglint $out/bin/msglint
